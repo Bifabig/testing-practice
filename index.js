@@ -1,24 +1,8 @@
-class Calculator {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
-  }
+const capitalize = (string) => {
+  const firstLetter = string.charAt(0).toUpperCase();
+  const otherLetters = string.slice(1);
+  const capitalized = `${firstLetter}${otherLetters}`;
+  return capitalized;
+};
 
-  add() {
-    return this.x + this.y;
-  }
-
-  subtract() {
-    return this.x - this.y;
-  }
-
-  divide() {
-    return this.x / this.y;
-  }
-
-  multiply() {
-    return this.x * this.y;
-  }
-}
-
-module.exports = Calculator;
+module.exports = capitalize;
