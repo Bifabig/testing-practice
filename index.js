@@ -1,16 +1,24 @@
-const stringLength = (string) => {
-  if (string.length > 0 && string.length <= 10) {
-    return string.length;
-  } else {
-    return 'err';
+class Calculator {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
   }
-};
 
-const reverseString = (string) => {
-  const splitString = string.split('');
-  const reversed = splitString.reverse();
-  const joinedString = reversed.join('');
-  return joinedString;
-};
+  add() {
+    return this.x + this.y;
+  }
 
-module.exports = { stringLength, reverseString };
+  subtract() {
+    return this.x - this.y;
+  }
+
+  divide() {
+    return this.x / this.y;
+  }
+
+  multiply() {
+    return this.x * this.y;
+  }
+}
+
+module.exports = Calculator;
